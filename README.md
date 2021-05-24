@@ -3,32 +3,13 @@
 This README outlines the details of collaborating on this Glimmer application.
 A short introduction of this app could easily go here.
 
-## Prerequisites
+## How to build 
 
-You will need the following things properly installed on your computer.
+1. Create glimmerjs app
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Yarn](https://yarnpkg.com/en/)
-* [Ember CLI](https://ember-cli.com/)
+```
+ember new wc-glimmerjs-clock --blueprint @glimmer/blueprint@0.13 --web-component=glimmerjs-clock --yarn
+```
 
-## Installation
+2. Change ember-cli version from `2.14.0` to `3.24.0` 
 
-* `git clone <repository-url>` this repository
-* `cd wc-glimmerjs-clock`
-* `yarn`
-
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-## Further Reading / Useful Links
-
-* [glimmerjs](http://github.com/tildeio/glimmer/)
-* [ember-cli](https://ember-cli.com/)
