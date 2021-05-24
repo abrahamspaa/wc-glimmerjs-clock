@@ -9,11 +9,14 @@
     {{/each}}
 
   {{/each}}
-
-  <line y1='2' y2='-20' stroke="#333" transform='rotate({{multiple 30 (divide (add this.hours this.minutes) 2) }})' />
   
-  <line y1='4' y2='-30'stroke="#666"  transform='rotate({{multiple 6 (divide (add this.minutes this.seconds) 10)}})'/>
+  {{!-- Hour needle --}}
+  <line y1='2' y2='-20' stroke="#333" transform='rotate({{add (multiple 30 this.hours) (divide this.minutes 2) }})' />
+  
+  {{!-- Minute needle --}}
+  <line y1='4' y2='-30'stroke="#666"  transform='rotate({{add (multiple 6 this.minutes) (divide this.seconds 10)}})'/>
 
+  {{!-- Second needle --}}
   <g transform='rotate({{multiple 6 this.seconds}})'>
 		<line y1='10' y2='-38' stroke="#b40000" />
 		<line stroke-width=3  y1='10' y2='2'stroke="#b40000" />
