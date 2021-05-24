@@ -1,1 +1,21 @@
-<div><h1>Welcome to Glimmer!</h1></div>
+<svg viewBox='-50 -50 100 100' width="100%" heigth="100%">
+  <circle r='48' stroke="#333" fill="#fff"/>
+
+  {{#each this.minutesMarker key="@index" as |minute index|}}
+    <line y1='35' y2='45' transform='rotate({{multiple 30 minute}})' stroke="#333" stroke-width=1 />
+
+    {{#each this.offsetMarker key="@offsetIndex" as |offset offsetIndex|}}
+      <line stroke="#999" stroke-width=0.5 y1='42' y2='45'transform='rotate({{multiple 6 (add minute offset)}})' />
+    {{/each}}
+
+  {{/each}}
+
+  <line y1='2' y2='-20' stroke="#333" transform='rotate({{multiple 30 (divide (add this.hours this.minutes) 2) }})' />
+  
+  <line y1='4' y2='-30'stroke="#666"  transform='rotate({{multiple 6 (divide (add this.minutes this.seconds) 10)}})'/>
+
+  <g transform='rotate({{multiple 6 this.seconds}})'>
+		<line y1='10' y2='-38' stroke="#b40000" />
+		<line stroke-width=3  y1='10' y2='2'stroke="#b40000" />
+	</g>
+</svg>
